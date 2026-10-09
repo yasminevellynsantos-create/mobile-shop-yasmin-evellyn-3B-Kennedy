@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAP — Kennedy Achados e Perdidos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container header-flex">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">KAP</span>
+      <span class="logo-text">Kennedy Achados e Perdidos</span>
+    </a>
+    <nav>
+      <a href="index.html" class="active">Início</a>
+      <a href="cadastrar.html">Cadastrar</a>
+      <a href="retirada.html">Retirada</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Encontre. Devolva. Resolva.</h1>
+    <p>Plataforma oficial da escola Kennedy para registrar e recuperar objetos perdidos.</p>
+
+    <div class="search-box">
+      <input type="text" id="busca" placeholder="🔍 O que você perdeu? (ex: mochila, celular, chave)">
+      <select id="filtroCategoria">
+        <option value="">Todas as categorias</option>
+        <option>Eletrônicos</option>
+        <option>Material Escolar</option>
+        <option>Roupas e Acessórios</option>
+        <option>Documentos</option>
+        <option>Chaves</option>
+        <option>Outros</option>
+      </select>
+      <select id="filtroStatus">
+        <option value="">Todos os status</option>
+        <option value="perdido">Perdido</option>
+        <option value="encontrado">Encontrado</option>
+        <option value="devolvido">Devolvido</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <div class="toolbar">
+    <h2>Objetos registrados</h2>
+    <a href="cadastrar.html" class="btn btn-primary">+ Cadastrar objeto</a>
+  </div>
+
+  <div id="resultadoInfo" class="resultado-info"></div>
+  <div id="listaObjetos" class="grid-objetos"></div>
+  <div id="vazio" class="vazio" style="display:none;">
+    <p>🔎 Nenhum objeto encontrado com esses filtros.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>KAP — Kennedy Achados e Perdidos</strong> · Encontre. Devolva. Resolva.</p>
+    <p>Projeto escolar desenvolvido por <strong>Lívia</strong> e <strong>Yasmin</strong>.</p>
+  </div>
+</footer>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

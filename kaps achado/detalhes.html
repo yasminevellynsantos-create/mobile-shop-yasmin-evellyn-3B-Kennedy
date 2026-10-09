@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalhes — KAP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container header-flex">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">KAP</span>
+      <span class="logo-text">Kennedy Achados e Perdidos</span>
+    </a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cadastrar.html">Cadastrar</a>
+      <a href="retirada.html">Retirada</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container narrow">
+  <a href="index.html" class="voltar">← Voltar para a lista</a>
+  <div id="detalhes" class="detalhes-card"></div>
+  <div id="naoEncontrado" style="display:none;">
+    <p>Objeto não encontrado.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>KAP</strong> · Encontre. Devolva. Resolva.</p>
+  </div>
+</footer>
+
+<script src="js/storage.js"></script>
+<script src="js/detalhes.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastrar Objeto — KAP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container header-flex">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">KAP</span>
+      <span class="logo-text">Kennedy Achados e Perdidos</span>
+    </a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cadastrar.html" class="active">Cadastrar</a>
+      <a href="retirada.html">Retirada</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container narrow">
+  <h1>Cadastrar objeto</h1>
+  <p class="subtitulo">Preencha os dados abaixo. Campos com * são obrigatórios.</p>
+
+  <form id="formCadastro" class="form-card">
+    <label>Título do objeto *</label>
+    <input type="text" id="titulo" required maxlength="80" placeholder="Ex: Mochila azul Nike">
+
+    <label>Categoria *</label>
+    <select id="categoria" required>
+      <option value="">Selecione...</option>
+      <option>Eletrônicos</option>
+      <option>Material Escolar</option>
+      <option>Roupas e Acessórios</option>
+      <option>Documentos</option>
+      <option>Chaves</option>
+      <option>Outros</option>
+    </select>
+
+    <label>Status *</label>
+    <select id="status" required>
+      <option value="perdido">Perdido (alguém procura)</option>
+      <option value="encontrado">Encontrado (está com a escola)</option>
+      <option value="devolvido">Devolvido</option>
+    </select>
+
+    <label>Descrição *</label>
+    <textarea id="descricao" required rows="4" maxlength="500" placeholder="Cor, marca, detalhes que ajudem a identificar..."></textarea>
+
+    <label>Local onde foi perdido/encontrado *</label>
+    <input type="text" id="local" required maxlength="100" placeholder="Ex: Pátio, Sala 12, Quadra">
+
+    <label>Data *</label>
+    <input type="date" id="data" required>
+
+    <label>Nome de quem cadastrou *</label>
+    <input type="text" id="contato" required maxlength="60" placeholder="Seu nome ou da pessoa responsável">
+
+    <label>Turma / Setor (opcional)</label>
+    <input type="text" id="turma" maxlength="40" placeholder="Ex: 2º Ano B / Secretaria">
+
+    <label>Foto do objeto (opcional)</label>
+    <input type="file" id="foto" accept="image/*">
+    <div id="previewWrap" class="preview-wrap" style="display:none;">
+      <img id="preview" alt="Pré-visualização">
+    </div>
+
+    <div class="acoes-form">
+      <button type="submit" class="btn btn-primary">Cadastrar objeto</button>
+      <a href="index.html" class="btn btn-ghost">Cancelar</a>
+    </div>
+  </form>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>KAP</strong> · Encontre. Devolva. Resolva.</p>
+  </div>
+</footer>
+
+<script src="js/storage.js"></script>
+<script src="js/cadastro.js"></script>
+</body>
+</html>
